@@ -13,7 +13,10 @@ router.get('/', async (req, res) => {
       }],
     });
 
-    const currentUser = userData.get({ plain: true });
+    let currentUser = {};
+    if (userData) {
+    	currentUser = userData.get({ plain: true });
+    }
     
     let where = {};
     if (req.query.sport) {
