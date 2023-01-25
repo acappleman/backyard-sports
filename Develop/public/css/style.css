@@ -1,0 +1,448 @@
+/*************************** LOGIN STYLE START ******************************/
+.login-dark {
+  height: 1000px;
+  background: #475d62;
+  background-size: cover;
+  position: relative;
+}
+
+.login-dark form {
+  background-color: #1e2833;
+  padding: 40px;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-dark .illustration {
+  text-align: center;
+  padding: 15px 0 20px;
+  font-size: 100px;
+  color: #2980ef;
+}
+
+.login-dark form .form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #434a52;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+}
+
+.login-dark form .btn-primary {
+  background: #214a80;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  outline: none;
+}
+
+.login-dark form .btn-primary:hover,
+.login-dark form .btn-primary:active {
+  background: #214a80;
+  outline: none;
+}
+
+.login-dark form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-dark form .forgot:hover,
+.login-dark form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.login-dark form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-container form {
+  width: 400px;
+}
+
+@media screen and (max-width: 850px) {
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: url('../images/backgroundimg.jpeg');
+    height: 900px;
+    padding-bottom: 30px;
+  }
+}
+
+/*************************** LOGIN STYLE END ******************************/
+/*************************** MAIN STYLE START ******************************/
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Source Code Pro', monospace;
+  margin: 0 auto;
+  padding: auto;
+  transition: all 0.5s;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  background-color: #475d62;
+  background-image: url(../images/backgroundimg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  border: 2px;
+  font-size: 25px;
+  text-align: right;
+}
+
+header {
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  border-bottom: 2px solid red;
+  background-color: #1a386a;
+  background-image: url(../images/BackyardSportsLogo1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+}
+
+footer {
+  background-color: #070707;
+  background-color: #1a386a;
+  color: white;
+  text-align: center;
+}
+
+.footer1,
+.footer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.title {
+  font-family: 'Bungee', sans-serif;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 56px;
+  color: black;
+}
+
+.display-4 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.jumbotron.jumbotron-fluid {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.search {
+  margin: 5px;
+  border-color: black;
+}
+
+.row {
+  color: black;
+}
+
+.btn.btn-primary {
+  color: black;
+  border-color: black;
+  border-width: 2px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+/*************************** MAIN STYLE END ******************************/
+/*************************** PROFILE STYLE START ******************************/
+.profile-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-welcome {
+  padding: 50px;
+  font-size: 36px;
+}
+
+.info-box,
+.create-team-box,
+.create-sport-box,
+.all-teams-box {
+  border: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.name-box {
+  background: none;
+  border: 2px solid black;
+  color: white;
+  font-size: 18px;
+  margin: 5px auto;
+}
+
+.team-btn {
+  margin: 5px;
+}
+
+.box-header {
+  border-bottom: 2px solid black;
+}
+
+.profile-team-card li {
+  text-align: left;
+}
+
+@media screen and (max-width: 850px) {
+  .all-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*************************** PROFILE STYLE END ******************************/
+/*************************** SEARCH STYLE START ******************************/
+.search-form-container {
+  background-size: cover;
+  position: relative;
+}
+
+.search-form-container form {
+  background-color: #1e2833;
+  padding: 40px;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-form-container .illustration {
+  text-align: center;
+  padding: 15px 0 20px;
+  font-size: 100px;
+  color: #2980ef;
+}
+
+.search-form-container form .form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #434a52;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+}
+
+.search-form-container form .btn-primary,
+.search-results-container .btn-primary {
+    background: #214a80;
+    border: none;
+    border-radius: 4px;
+    padding: 11px;
+    box-shadow: none;
+    margin-top: 26px;
+    text-shadow: none;
+    outline: none;
+}
+
+.search-results-container .btn-primary {
+    float: right;
+}
+
+.search-form-container form .btn-primary:hover,
+.search-form-container form .btn-primary:active {
+  background: #214a80;
+  outline: none;
+}
+
+.search-form-container form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.search-form-container form .forgot:hover,
+.search-form-container form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.search-form-container form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.search-form-container form select.form-control {
+  color: gray;
+}
+
+.search-results-container .team-container {
+  border: solid 1px gray;
+}
+
+.search-results-container h2 {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.search-results-container h4 {
+  text-align: center;
+}
+
+.search-results-container .team-container {
+  color: #fff;
+}
+
+.dark-background {
+  background-color: #1e2833;
+  color: #fff;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+#map {
+  margin-top: 40px;
+  height: 400px;
+}
+
+/*************************** SEARCH STYLE END ******************************/
+/*************************** CARD STYLE START ******************************/
+.card {
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px;
+  background-color: #1e2833;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  display: block;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-container {
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+/*************************** CARD STYLE END ******************************/
+/*************************** CHAT STYLE START ******************************/
+/*body {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}*/
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius:
+  2rem;
+  margin: 0.25rem;
+}
+
+#input:focus {
+  outline: none;
+}
+    
+#form .button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+    
+#messages .li {
+  padding: 0.5rem 1rem;
+}
+    
+#messages .li:nth-child(odd) {
+  background: #efefef;
+}
+/*************************** CHAT STYLE END ******************************/

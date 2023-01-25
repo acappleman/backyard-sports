@@ -1,0 +1,130 @@
+<div class="p-5 rounded-3">
+  <div class="container-fluid">
+    {{#if logged_in}}
+    <h1 class="display-4">Welcome Back, {{username}}!</h1>
+    {{else}}
+    <h1 class="display-4">Welcome to Backyard Sports!</h1>
+    {{/if}}
+  </div>
+</div>
+
+<div class="card-container">
+  {{> card}}
+</div>
+
+<div class="row mr-0 pb-5">
+  <div class="px-5 search-form-container col-md-6">
+    <form method="post" class="search-form">
+      <h2 class='sr-only'>Search Teams</h2>
+      <div class='illustration'>
+        <i class='icon ion-ios-locked-outline'></i>
+      </div>
+      <div class='form-group'>
+        <select name="state" id="search-state" class="form-select form-control">
+          {{#if where.state}}
+          <option value="">State</option>
+          {{#each states as |state|}}
+          {{#if (isSelected ../where.state state.value)}}
+          <option selected value="{{state.value}}">{{state.name}}</option>
+          {{else}}
+          <option value="{{state.value}}">{{state.name}}</option>
+          {{/if}}
+          {{/each}}
+          {{else}}
+          <option selected value="">State</option>
+          {{#each states as |state|}}
+          <option value="{{state.value}}">{{state.name}}</option>
+          {{/each}}
+          {{/if}}
+        </select>
+      </div>
+      <div class='form-group'>
+        <input class='form-control' type='text' name='zip' placeholder='Zip Code' id='search-zip'
+          value='{{where.team_zip_code}}' />
+      </div>
+      <div class='form-group'>
+        <input class='form-control' type='text' name='city' placeholder='City' id='search-city'
+          value='{{where.city}}' />
+      </div>
+      <div class='form-group'>
+        <select name="sport" id="search-sport" class="form-select form-control">
+          {{#if where.sport}}
+          <option value="">Sport</option>
+          {{#each sports as |sport|}}
+          {{#if (isSelected ../where.sport sport.name)}}
+          <option selected value="{{sport.name}}">{{sport.name}}</option>
+          {{else}}
+          <option value="{{sport.name}}">{{sport.name}}</option>
+          {{/if}}
+          {{/each}}
+          {{else}}
+          <option selected value="">Sport</option>
+          {{#each sports as |sport|}}
+          <option value="{{sport.name}}">{{sport.name}}</option>
+          {{/each}}
+          {{/if}}
+        </select>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-primary btn-block' type='submit'>
+          Search
+        </button>
+      </div>
+    </form>
+
+    
+    <div id="map"></div>
+  </div>
+  <div class="search-results-container col-md-6">
+    <div class="p-5 dark-background">
+      <h2>Teams</h2>
+      {{#if teams}}
+      {{#each teams as |team| }}
+      <div class="teams row">
+        <div class="col-xs-12 team-container p-4 my-1">
+          <h4>{{team.name}}</h4>
+          <ul>
+            <li>Sport: {{team.sport}}</li>
+            <li>Captain: {{team.user.username}}, Email: {{team.user.email}}</li>
+            <li>Location: {{team.city}}, {{team.state}} {{team.team_zip_code}}</li>
+          </ul>
+          {{#if ../logged_in}}
+          <button class="btn-primary btn-block" id="joinTeam{{team.id}}" onclick="joinTeam({{team.id}})">Join Team</button>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="teams row">
+        <div class="col-xs-12 team-container p-4 my-1">
+          <h4>No Teams found. Please search again or <a href="/profile">create your own team</a>.</h4>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+<script>
+  
+// Sets yellowstone location as default when page loads
+function initMap() {
+  var options = {
+      zoom: 8,
+      center: { lat: 28.5384, lng: -81.3789 }
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options);
+
+  new google.maps.Marker({
+      position: { lat: 28.5384, lng: -81.3789 },
+      map: map,
+      title: 'Orlando, FL' //Marker shows Yellowstone park name on hover
+  });
+}
+
+</script>
+<script src="./js/search.js"></script>
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOQradlhO76Z0l-Yorgij0RUAkMC6nMjc&callback=initMap">
+  </script>

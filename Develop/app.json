@@ -1,0 +1,22 @@
+{
+    "name": "Chat-Feature",
+    "description": "A socket.io app to use chat interface",
+    "website": "",
+    "repository": "",
+    "logo": "",
+    "success_url": "/",
+    "keywords": [
+      "node",
+      "express",
+      "socket.io",
+      "realtime",
+      "websocket"
+    ],
+    "scripts": {
+    },
+    "addons": [
+    ],
+    "env": {
+      "BUILDPACK_URL": ""
+    }
+  }
